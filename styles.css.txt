@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f5; /* ION white */
+    background-image: url('path/to/your/texture-image.jpg'); /* Texture image path */
+    background-size: cover;
+    color: #1b1f23;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav h1 {
+    font-size: 24px;
+    color: #00b4d8; /* ION blue */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #1b1f23;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00b4d8; /* ION blue */
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.intro h1, .intro h2, .intro h3 {
+    margin: 0;
+}
+
+.intro h1 {
+    font-size: 24px;
+    color: #00b4d8; /* ION blue */
+}
+
+.intro h2 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.intro h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.highlight {
+    color: #00b4d8; /* ION blue */
+}
+
+.intro p {
+    font-size: 16px;
+    margin: 20px 0;
+    color: #1b1f23;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: #00b4d8; /* ION blue */
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #1b1f23;
+}
+
+.download-cv {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid #00b4d8; /* ION blue */
+    color: #00b4d8; /* ION blue */
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-cv:hover {
+    background-color: #00b4d8; /* ION blue */
+    color: #f0f0f5; /* ION white */
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #00b4d8; /* ION blue */
+    margin-top: 20px;
+}
+
+#about h2, #services h2, #portfolio h2, #contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #00b4d8; /* ION blue */
+}
+
+#services .service-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#services .card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#services .card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00b4d8; /* ION blue */
+}
+
+#services .card p {
+    color: #1b1f23;
+    margin-bottom: 20px;
+}
+
+#services .card a {
+    color: #00b4d8; /* ION blue */
+    text-decoration: none;
+    border-bottom: 1px solid #00b4d8; /* ION blue */
+    padding-bottom: 5px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+#services .card a:hover {
+    color: #1b1f23;
+    border-color: #1b1f23;
+}
+
+#portfolio .project-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#portfolio .project {
+    flex: 1;
+    min-width: 250px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio .project img {
+    width: 100%;
+    height: auto;
+}
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.skills-table th, .skills-table td {
+    border: 1px solid #00b4d8; /* ION blue */
+    padding: 10px;
+    text-align: left;
+}
+
+.skills-table th {
+    background-color: #00b4d8; /* ION blue */
+    color: #f0f0f5; /* ION white */
+}
+
+#contact {
+    text-align: center;
+    padding: 20px;
+}
+
+#contact a {
+    color: #00b4d8; /* ION blue */
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    color: #1b1f23;
+}
