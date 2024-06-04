@@ -128,13 +128,18 @@ nav ul li a:hover {
     color: #f0f0f5; /* ION white */
 }
 
-.profile-picture img {
+.profile-picture {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 5px solid #00b4d8; /* ION blue */
-    margin-top: 20px;
+    object-fit: cover;
+    background-color: #00b4d8; /* Adjust this to your preferred background color */
+    border: 5px solid #fff; /* Optional: Add a white border around the picture */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a nicer effect */
+    display: block;
+    margin: 0 auto; /* Center the image */
 }
+
 
 #about h2, #services h2, #portfolio h2, #contact h2 {
     font-size: 32px;
