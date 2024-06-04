@@ -140,6 +140,14 @@ nav ul li a:hover {
     margin: 0 auto; /* Center the image */
 }
 
+.organizations-carousel img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain; /* Ensures the entire image fits within the given dimensions */
+    margin: 0 auto; /* Centers the image horizontally */
+    display: block;
+}
+
 
 #about h2, #services h2, #portfolio h2, #contact h2 {
     font-size: 32px;
