@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empower Apps – Digital Agency Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --blue: #007BFF;
+      --bg-light: #f5f8ff;
+      --text-dark: #222;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    header {
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    nav h1 {
+      font-size: 1.8rem;
+      color: var(--text-dark);
+    }
+    nav h1 span { color: var(--blue); }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .hero {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+    .hero-text h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    .typing-container {
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+    }
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 1.8rem;
+      margin-top: 12px;
+    }
+    .social-icons a {
+      color: var(--blue);
+    }
+    .profile {
+      text-align: center;
+    }
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 6px solid var(--blue);
+      object-fit: cover;
+      box-shadow: 0 8px 16px rgba(0, 123, 255, 0.15);
+    }
+    .download-cv {
+      display: block;
+      margin: 16px auto 0;
+      background: var(--blue);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      width: max-content;
+    }
+
+    .card-section {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+      padding: 30px;
+      max-width: 900px;
+      margin: 40px auto;
+    }
+    .card-section h2, .card-section h3 {
+      color: var(--blue);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .org-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+      margin-top: 20px;
+    }
+    .org-icons img {
+      height: 60px;
+    }
+    .stack-list {
+      font-size: 1rem;
+      line-height: 1.8;
+      padding-left: 20px;
+      margin-top: 20px;
+    }
+
+    .contact {
+      background: var(--blue);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .contact a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text {
+        order: 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1><a href="index.html" style="text-decoration: none; color: inherit;"><span>Empower</span> Apps</a></h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Hello, my name is <strong>Sainath</strong></h2>
+      <div class="typing-container">I can work flexibly as: <span id="typing"></span></div>
+      <div class="social-icons">
+        <span>Connect with me on</span>
+        <a href="https://github.com/Sainath9757" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sainath-badam-48b466128/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="profile">
+      <img src="IMG_0985.JPEG" alt="Profile Picture">
+      <a href="#" class="download-cv">Download CV</a>
+    </div>
+  </section>
+
+  <section class="card-section" id="about">
+    <h2>About Me</h2>
+    <p>I'm passionate about building scalable, secure, and insight-driven data systems. Whether it's modernizing ETL pipelines, integrating dashboards in Power BI, or leading Azure cloud migration projects, my approach is always solution-oriented and collaborative. My mission is to help businesses unlock the value of their data and automate decision-making at scale.</p>
+    <h3>Below is the Technology Stack I Worked With:</h3>
+    <ul class="stack-list">
+      <li><strong>Cloud:</strong> Azure, AWS, GCP</li>
+      <li><strong>Azure:</strong> Data Factory, Fabric, ADLS, LogicApps, Synapsis, Databricks, Airflow, Glue</li>
+      <li><strong>Business Intelligence:</strong> Power BI, Tableau, DOMO, SSRS, Google Analytics, PySpark, BigQuery</li>
+      <li><strong>Databases:</strong> Azure SQL, SQL Server, MySQL, Oracle, MongoDB, DuckDB, CRM, RedShift</li>
+      <li><strong>Programming Languages:</strong> SQL, Python, DAX, MDX, Mashup Language, HTML, JavaScript</li>
+    </ul>
+  </section>
+
+  <section class="card-section">
+    <h2>Organizations I've Worked With</h2>
+    <div class="org-icons">
+      <img src="Diebold_Nixdorf.jpg" alt="Proximus">
+      <img src="DXC Logo_Purple+Black RGB.png" alt="DXC HDFC">
+      <img src="unisys-logo.png" alt="Unisys">
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email me at <a href="mailto:sainath2991@gmail.com">sainath2991@gmail.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Empower Apps. All rights reserved.
+  </footer>
+
+  <script>
+    const typingContainer = document.getElementById("typing");
+    const roles = ["Azure Data Engineer", "BI Engineer", "Data Analyst"];
+    let i = 0, j = 0, isDeleting = false;
+
+    function type() {
+      const current = roles[i];
+      typingContainer.textContent = isDeleting ? current.substring(0, j--) : current.substring(0, j++);
+      if (!isDeleting && j === current.length + 1) isDeleting = true, setTimeout(type, 1000);
+      else if (isDeleting && j === 0) isDeleting = false, i = (i + 1) % roles.length, setTimeout(type, 200);
+      else setTimeout(type, isDeleting ? 60 : 100);
+    }
+    type();
+  </script>
+</body>
+</html>
