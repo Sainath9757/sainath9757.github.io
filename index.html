@@ -1,183 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sainath Badam - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empower Apps – Digital Solutions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f9fbff; color: #333; line-height: 1.6; }
+    header { background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+    nav { max-width: 1200px; margin: auto; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; }
+    nav h1 { font-size: 1.8rem; font-weight: 700; color: #111; }
+    nav h1 span { color: #007BFF; }
+    nav ul { list-style: none; display: flex; gap: 24px; align-items: center; }
+    nav ul li a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
+    nav ul li a:hover { color: #007BFF; }
+
+    .hero { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; max-width: 1200px; margin: auto; padding: 60px 20px; }
+    .hero-text { max-width: 600px; }
+    .hero-text h2 { font-size: 2.5rem; margin-bottom: 20px; color: #111; }
+    .hero-text h2 span { color: #007BFF; }
+    .hero-text p { margin-bottom: 30px; font-size: 1.1rem; }
+    .hero-buttons a { display: inline-block; margin-right: 15px; padding: 12px 24px; border-radius: 6px; font-weight: 600; text-decoration: none; }
+    .btn-primary { background: #007BFF; color: white; }
+    .btn-outline { border: 2px solid #007BFF; color: #007BFF; }
+    .hero-image img { max-width: 500px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+
+    .typing { font-weight: bold; color: #007BFF; display: inline; }
+
+    .services-section { background: #f4f7fc; padding: 80px 20px; text-align: center; }
+    .services-section h2 { font-size: 2.2rem; margin-bottom: 20px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; max-width: 1100px; margin: auto; }
+    .service-card { background: white; padding: 30px 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; }
+    .service-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+    .service-card i { font-size: 2rem; margin-bottom: 10px; color: #007BFF; }
+    .service-card h3 { margin-bottom: 10px; font-size: 1.2rem; }
+    .service-card p { font-size: 0.95rem; color: #555; }
+
+    .contact-form { max-width: 700px; margin: 60px auto 0; display: grid; gap: 20px; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .contact-form input, .contact-form textarea { padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
+    .contact-form button { background: #007BFF; color: #fff; padding: 14px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; }
+    .contact-form button:hover { background: #0056b3; }
+
+    footer { text-align: center; padding: 20px; background: #222; color: #fff; margin-top: 80px; }
+
+    @media (max-width: 768px) {
+      .hero { flex-direction: column; text-align: center; }
+      .hero-buttons a { margin-bottom: 10px; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Welcome to My portfolio</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <h1><span>Empower</span> Apps</h1>
 
-    <section id="home" class="section">
-        <div class="container">
-            <div class="intro">
-                <img src="IMG_0985.JPEG" alt="Profile Picture" class="profile-picture">
-                <h1>Hello, my name is</h1>
-                <h2>Sainath Badam</h2>
-                <h3>And I'm a <span class="highlight typing-container" id="typing"></span></h3>
-                <p>I am a dedicated IT professional with over 4 years of experience as a Support Engineer, specializing in providing comprehensive technical support to ensure the smooth functioning of organizational IT systems.  Proven expertise in resolving technical issues related to Office 365, Azure, and Power BI, with a proactive, hands-on approach to 3rd line support. Strong background in Microsoft technologies, ITIL best practices, and project collaboration.</p>
-                <p>As a Power Platform Consultant, I specialize in developing canvas apps, model-driven apps, and custom Power Automate flows, helping organizations automate redundant day-to-day tasks.</p>
-                <div class="social-icons">
-                    <a href="https://github.com/Sainath9757"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/sainath-badam-48b466128/"><i class="fab fa-linkedin"></i></a>
-                </div>
-                <a href="#" class="download-cv">Download CV</a>
-            </div>
-        </div>
-    </section>
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#services">Services</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#portfolio">Portfolio</a></li>
+  <li><a href="#about">About Us</a></li>
+</ul>
+      </ul>
 
-    <section id="organizations" class="section">
-    <div class="container">
-        <h3>Organizations I've Worked With</h3>
-        <div class="organizations-carousel">
-            <div><img src="Diebold_Nixdorf.jpg" alt="Company 1"></div>
-            <div><img src="DXC Logo_Purple+Black RGB.png" alt="Company 2"></div>
-            <div><img src="unisys-logo.png" alt="Company 3"></div>
-        </div>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Digital Solutions for Your <span>Creative Vision</span></h2>
+      <p>We specialize in <span class="typing" id="typing"></span></p>
+      <p>Empower Apps combines intelligent design and cloud-native engineering to craft powerful solutions in data, automation, and digital presence.</p>
+      <div class="hero-buttons">
+        <a href="#portfolio" class="btn-primary">View Portfolio</a>
+        <a href="#services" class="btn-outline">Learn More</a>
+      </div>
     </div>
-</section>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34" alt="Empower Apps Team Office"/>
+    </div>
+  </section>
 
+  <section id="services" class="services-section">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-cloud"></i>
+        <h3>Azure Infrastructure</h3>
+        <p>Expert guidance on Azure setup, optimization, and cloud migration.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-cogs"></i>
+        <h3>Power Apps Development</h3>
+        <p>Workflow automation using Power Platform with Power Automate & Apps.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-code"></i>
+        <h3>Web Development</h3>
+        <p>Low-code and custom web apps built for speed and user experience.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-store"></i>
+        <h3>Online Store Management</h3>
+        <p>Full lifecycle ecommerce setup, from design to operations.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-shipping-fast"></i>
+        <h3>Drop Shipping</h3>
+        <p>End-to-end automated systems for your drop shipping business.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-database"></i>
+        <h3>Data Engineering</h3>
+        <p>Design & build scalable ETL pipelines, analytics platforms & warehouses.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-robot"></i>
+        <h3>AI Tools Integration</h3>
+        <p>Boost productivity with AI-powered internal and customer-facing tools.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am passionate about leveraging Microsoft services to drive modern workplace transformation. With a strong focus on Microsoft technologies such as Azure, Office 365, Power Apps, and SharePoint, I excel at resolving complex issues and developing solutions that enhance organizational efficiency.</p>
-            <p>My expertise includes creating canvas apps, model-driven apps, and custom Power Automate flows, which streamline and automate repetitive tasks. This not only boosts productivity but also empowers businesses to achieve their goals more effectively.</p>
-            <p>I am actively seeking opportunities to further my career as a modern workplace transformation consultant. My goal is to collaborate with organizations to solve real-world problems through innovative Microsoft technology solutions. I am eager to take on roles where I can make a meaningful impact and drive significant improvements in business processes.</p>
-            <table class="skills-table">
-                <tr>
-                    <th colspan="2">My Key Skills</th>
-                </tr>
-                <tr>
-                    <td>Operating Systems</td>
-                    <td>Windows, Linux Ubuntu, IOS, MAC</td>
-                </tr>
-                <tr>
-                    <td>Low Code Platforms</td>
-                    <td>Microsoft Power Platform (Power BI, Power Automate)</td>
-                </tr>
-                <tr>
-                    <td>Dashboard and Reporting</td>
-                    <td>Power BI, Excel, QuickBase</td>
-                </tr>
-                <tr>
-                    <td>Database</td>
-                    <td>SQL, Dataverse</td>
-                </tr>
-                <tr>
-                    <td>Cloud</td>
-                    <td>Azure, IAM, Defender, Azure VDI, Azure Entra</td>
-                </tr>
-                <tr>
-                    <td>Tools</td>
-                    <td>ServiceNow, Zendesk, Rave</td>
-                </tr>
-                <tr>
-                    <td>Technologies</td>
-                    <td>Office 365, Azure, Power BI, Dynamics CRM, Microsoft 365 Admin, Mimecast, MS Teams Admin (with chatbot integration), Intune configuration, SCCM, TCP/IP, DHCP, Active Directory, Defender suite (knowledge)</td>
-                </tr>
-            </table>
-        </div>
-    </section>
-
-    <section id="portfolio" class="section">
-        <div class="container">
-            <h2>Latest Projects</h2>
-            <div class="projects-gallery">
-                <div class="project-item">
-                    <img src="project1.jpg" alt="Project 1">
-                    <p><strong>Module Management App for University:</strong> Developed a user-friendly Power App for module management, enhancing the process for students to select and manage their modules efficiently. Automated the approval process, reducing back-and-forth emails between course leaders and students. Provided a real-time dashboard connected to Dataverse for up-to-date module availability. Streamlined module request submission and tracking.</p>
-                </div>
-                <div class="project-item">
-                    <img src="project2.jpg" alt="Project 2">
-                    <p><strong>Assistive Lane Management Tool:</strong> Developed a custom app tailored for engineers working in lanes, streamlining machine configuration processes. Replaced traditional paper-based management with digital solutions, catalyzing a digital transformation. Implemented self-checkout commissioning within the app, enabling engineers and management to track configuration progress. Leveraged SharePoint integration for seamless data handling and integration with Excel sheets, facilitating Power BI reporting. Achieved a 99% reduction in configuration faults, eliminating paper-based processes and introducing live monitoring and tracking capabilities. Ensured data security and role-based access within the Microsoft environment, providing enhanced security for confidential data handled by engineers during work.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Email me at: <a href="mailto:mesainathbadam@gmail.com">mesainathbadam@gmail.com</a> / <a href="mailto:sainath.badam@empowerapps.co.uk">sainath.badam@empowerapps.co.uk</a></p>
-        </div>
-    </section>
-
-<section id="test-projects" class="section">
+<section id="contact" class="section" style="background-color: #007BFF; color: white;">
     <div class="container">
-        <h2>Test Projects</h2>
-        <p><a href="https://github.com/Sainath9757/testslims" target="_blank">TestSlims</a></p>
-        <p><a href="https://sainath9757.github.io/slimchickens.html" target="_blank">Slim Chickens Review</a></p>
-</section>
+      <h2 style="text-align:center; margin-bottom: 30px;">Contact Us</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Company / Project Name">
+        <textarea placeholder="Tell us briefly what you need..." rows="5" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
 
+  <footer>
+    <p>&copy; 2025 Empower Apps. All Rights Reserved. | <a href="https://empowerapps.co.uk" style="color:#fff; text-decoration:underline;">empowerapps.co.uk</a></p>
+  </footer>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const typing = document.getElementById("typing");
+      const services = ["Website Development", "Data Engineering", "Power Platform Automation", "Cloud Architecture", "AI Integration"];
+      let idx = 0, char = 0, isDeleting = false;
 
-    <footer>
-        <p>&copy; 2023 by Sainath Badam. All Rights Reserved.</p>
-    </footer>
+      function type() {
+        const text = services[idx];
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const typingContainer = document.getElementById("typing");
-            const titles = [
-                "Technical Analyst",
-                "Service Delivery Co-ordinator",
-                "End User Services Engineer",
-                "Microsoft Power Platform Consultant"
-            ];
-            
-            let titleIndex = 0;
-            let charIndex = 0;
-            let currentTitle = titles[titleIndex];
-            
-            function type() {
-                if (charIndex < currentTitle.length) {
-                    typingContainer.textContent += currentTitle.charAt(charIndex);
-                    charIndex++;
-                    setTimeout(type, 150);
-                } else {
-                    setTimeout(erase, 1500);
-                }
-            }
-            
-            function erase() {
-                if (charIndex > 0) {
-                    typingContainer.textContent = currentTitle.substring(0, charIndex - 1);
-                    charIndex--;
-                    setTimeout(erase, 100);
-                } else {
-                    titleIndex = (titleIndex + 1) % titles.length;
-                    currentTitle = titles[titleIndex];
-                    setTimeout(type, 150);
-                }
-            }
-            
-            type();
+        if (isDeleting) {
+          typing.textContent = text.substring(0, char--);
+        } else {
+          typing.textContent = text.substring(0, char++);
+        }
 
-            // Initialize slick carousel
-            $('.organizations-carousel').slick({
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000
-            });
-        });
-    </script>
+        let delay = isDeleting ? 50 : 100;
+
+        if (!isDeleting && char === text.length + 1) {
+          isDeleting = true;
+          delay = 1000;
+        } else if (isDeleting && char < 0) {
+          isDeleting = false;
+          idx = (idx + 1) % services.length;
+          char = 0;
+          delay = 200;
+        }
+
+        setTimeout(type, delay);
+      }
+
+      type();
+    });
+</script>
+
 </body>
 </html>
