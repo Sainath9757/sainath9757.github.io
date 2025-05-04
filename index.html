@@ -9,12 +9,59 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f9fbff; color: #333; line-height: 1.6; }
     header { background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-    nav { max-width: 1200px; margin: auto; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
     nav h1 { font-size: 1.8rem; font-weight: 700; color: #111; }
     nav h1 span { color: #007BFF; }
-    nav ul { list-style: none; display: flex; gap: 24px; align-items: center; }
-    nav ul li a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
+
+    .nav-toggle {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #333;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
     nav ul li a:hover { color: #007BFF; }
+
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        padding-top: 20px;
+      }
+      nav ul.active {
+        display: flex;
+      }
+    }
 
     .hero { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; max-width: 1200px; margin: auto; padding: 60px 20px; }
     .hero-text { max-width: 600px; }
@@ -43,27 +90,20 @@
     .contact-form button:hover { background: #0056b3; }
 
     footer { text-align: center; padding: 20px; background: #222; color: #fff; margin-top: 80px; }
-
-    @media (max-width: 768px) {
-      .hero { flex-direction: column; text-align: center; }
-      .hero-buttons a { margin-bottom: 10px; }
-    }
   </style>
 </head>
 <body>
   <header>
     <nav>
       <h1><span>Empower</span> Apps</h1>
-
-<ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#services">Services</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="portfolio2.0.html">Portfolio</a></li>
-  <li><a href="Aboutus.html">About Us</a></li>
-</ul>
+      <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+      <ul id="navMenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About Us</a></li>
       </ul>
-
     </nav>
   </header>
 
@@ -123,7 +163,7 @@
     </div>
   </section>
 
-<section id="contact" class="section" style="background-color: #007BFF; color: white;">
+  <section id="contact" class="section" style="background-color: #007BFF; color: white;">
     <div class="container">
       <h2 style="text-align:center; margin-bottom: 30px;">Contact Us</h2>
       <form class="contact-form">
@@ -140,7 +180,11 @@
     <p>&copy; 2025 Empower Apps. All Rights Reserved. | <a href="https://empowerapps.co.uk" style="color:#fff; text-decoration:underline;">empowerapps.co.uk</a></p>
   </footer>
 
-<script>
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function () {
+      document.getElementById('navMenu').classList.toggle('active');
+    });
+
     document.addEventListener("DOMContentLoaded", function () {
       const typing = document.getElementById("typing");
       const services = ["Website Development", "Data Engineering", "Power Platform Automation", "Cloud Architecture", "AI Integration"];
@@ -172,7 +216,6 @@
 
       type();
     });
-</script>
-
+  </script>
 </body>
 </html>
